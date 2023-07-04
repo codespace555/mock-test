@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+.image_box {
+  display: grid;
+  grid-template-areas:
+    "item-1 item-1 item-3"
+    " item-2 item-2 item-3";
+    gap: 20px;
+    width: 700px;
+    padding: 20px;
+    
+}
+
+.item-1 {
+  grid-area: item-1;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  
+  width: 620px;
+  height: 300px;
+  gap: 20px;
+}
+.box{
+    /* background-color: aqua; */
+}
+.item-2 {
+  grid-area: item-2;
+  width: 620px;
+  height: 290px;
+  /* background-color: aqua; */
+
+}
+.item-3 {
+  grid-area: item-3;
+  display: grid;
+  display: grid;
+  grid-template-rows: 190px 190px 190px;
+  width: 300px;
+  height: 540px;
+  gap: 20px;
+}
+
+.img1{
+    width: 300px;
+    height: 300px;
+}
+
+.img2{
+    width: 620px;
+  height: 290px;
+}
+.img3{
+width: 300px;
+height: 190px;
+}
+
+        
+    </style>
+</head>
+
+<body>
+    <main class="image_box">
+        <div class="item-1">
+            <div class="box"><img src="https://source.unsplash.com/random/200x200?sig=1" alt="" class="img1"></div>
+            <div class="box"><img src="https://source.unsplash.com/random/200x200?sig=2" alt="" class="img1"></div>
+        </div> 
+        <div class="item-2">
+            <img src="https://source.unsplash.com/random/200x200?sig=3" alt="" class="img2">
+
+        </div>
+        <div class="item-3">
+            <div class="box"><img src="https://source.unsplash.com/random/300x200" alt="" class="img3"></div>
+            <div class="box"><img src="https://picsum.photos/200/300" alt="" class="img3"></div>
+            <div class="box"><img src="https://picsum.photos/200/300?nocache=<?php echo microtime(); ?>" alt="" class="img3"></div>
+        </div>
+        
+
+    </main>
+</body>
+
+</html>

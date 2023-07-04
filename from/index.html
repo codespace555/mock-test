@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    form h1 {
+        font-size: 48px;
+        border-bottom: 2px solid #000;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    div {
+        padding: 20px;
+        width: fit-content;
+        display: flex;
+        background-color: #3CBC8D;
+        color: white;
+    }
+
+    div input {
+        margin: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        background-color: #3CBC8D;
+        color: white;
+        border: none;
+    }
+
+    input[type=color] {
+        height: 100px;
+        width: 100px;
+    }
+
+    input[type=color] {
+        height: 100px;
+        width: 100px;
+    }
+
+    input[type=number] {
+        height: 50px;
+        width: 500px;
+    }
+</style>
+
+<body>
+    <form action="/backend" method="post">
+        <h1>Form</h1>
+
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter Your Name" id="name" name="name">
+
+
+        <label for="email">Email Id</label>
+        <input type="email" placeholder="Enter Your Email" id="email" name="email">
+
+
+        <label for="phone"> Phone number:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter Your password" name="password">
+
+
+        <label for="age">Age</label>
+        <input type="number" placeholder="Enter your age" id="age" name="age">
+
+        <label for="gender">Gender</label>
+        <div>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Other
+        </div>
+
+        <label for="Date">Date</label>
+        <input type="date" id="Date" name="Date">
+
+
+        <label for="color">Color Pick</label>
+        <input type="color" id="color" name="color">
+
+
+    </form>
+</body>
+
+</html>
