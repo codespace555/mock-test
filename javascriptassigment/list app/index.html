@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list App</title>
+</head>
+<style>
+    .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .input input {
+        border: none;
+        border-bottom: 2px solid #000;
+        margin-left: 5px;
+    }
+
+    input {
+        padding: 3px;
+        font-size: 20px;
+    }
+
+    .submit {
+        background-color: #4CAF50;
+        padding: 5px;
+        color: azure;
+        cursor: pointer;
+        font-size: 14px;
+
+    }
+
+    .submit:hover {
+        background-color: #175f19;
+
+    }
+
+    li {
+        border: 2px solid #000;
+        padding: 10px;
+        width: 500px;
+        background-color: burlywood;
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <div class="list">
+        <div class="input">
+            <label for="">Enter Your Text:</label>
+            <input type="text" id="input-text">
+            <input type="submit" class="submit" onclick="addToList()">
+        </div>
+        <ul id="data">
+            
+        </ul>
+    </div>
+</body>
+<script>
+
+    function addToList() {
+        const input = document.getElementById('input-text');
+        console.log(input)
+        const data = document.getElementById("data");
+        const listItem = document.createElement('li');
+        data.innerHtml = listItem;
+        listItem.innerText = input.value;
+        data.appendChild(listItem);
+       input.value = ""
+      
+        }
+</script>
+
+</html>
