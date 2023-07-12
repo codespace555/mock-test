@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Custom Modal Window</title>
+<style>
+    body{
+        text-align: center;
+    }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(94, 59, 127);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+#myBtn{
+   width: 200px;
+   height: 50px;
+   background-color: rgb(114, 78, 148);
+   cursor: pointer;
+}
+</style>
+</head>
+<body>
+<button id="myBtn">Open Modal</button>
+
+
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <h1>This is a modal window</h1>
+    <p> clicking outside of it or by clicking the close button.</p>
+    <button class="close" onclick="closeModal()"><i class="fa-solid fa-x"></i></button>
+  </div>
+</div>
+<script>
+const modal = document.getElementById("myModal");
+const openbtn = document.getElementById("myBtn")
+
+    function openModal() {
+      modal.style.display = "block";
+    }
+    
+    function closeModal() {
+      modal.style.display = "none";
+    }
+    
+    openbtn.addEventListener("click", openModal);
+    
+    window.addEventListener("click", function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+    </script>
+    <script src="https://kit.fontawesome.com/c54e034b6c.js" crossorigin="anonymous"></script>
+</body>
+</html>
